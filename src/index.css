@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+* {
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
+  font-family: Outfit, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+    background-color: #F3F4F6;
+
+}
+.input {
+  position: relative;
+}
+.input input{
+    transition: all .3s ease;
+    
+
+}
+.input label{
+  position: absolute;
+  cursor: text;
+  z-index: 2;
+top: 25px;
+    left: 17px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  padding: 0 10px;
+  color: #818181;
+  transition: all .3s ease
+}
+.input input:focus + label,
+.input input:valid + label{
+  font-size: 13px;
+  top: -5px
+}
+.input input:focus + label{
+  color: #1976D2;
+    background: #fff;
+
+}
+.form button ,
+.form_data button{
+  text-transform: uppercase;
+      padding: 8px;
+      width: 95%;
+      margin: auto;
+      display: block;
+}
+.input input:focus{
+  border:1px solid  #1976D2
+}
+/* .btn_data {
+  background-color: #7000E0;
+  padding: 10px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.home_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+} */
