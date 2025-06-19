@@ -36,9 +36,7 @@ const RegisterForm = () => {
 
   const name = "Create Account";
   return (
-    <form
-      action=""
-      onSubmit={(e) => handleSubmit(e)}
+    <div
       className="form_data bg-[#F9F9F9] h-[100vh] flex flex-col p-3 mt-7 rounded-md w-[85%] m-auto"
     >
       <h3 className="head text-[25px] font-[600]  p-[10px] pt-[1px] mb-3 ">
@@ -67,12 +65,12 @@ const RegisterForm = () => {
           </div>
           </div>
         </div>
-        <div>
+        <Link to={"/profile"}>
           {" "}
           <BtnItem name={name} />{" "}
-        </div>
+        </Link>
       </div>
-    </form>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import BtnItem from "../Components/BtnItem";
 import InpItem from "../Components/InpItem";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   // const Email = useRef(null);
@@ -41,10 +41,10 @@ const LoginForm = () => {
       }
  
 
-      <div className="">
+      <Link to={"/profile"} className="">
         {" "}
         <BtnItem name={name} />
-      </div>
+      </Link>
     </div>
   );
 };

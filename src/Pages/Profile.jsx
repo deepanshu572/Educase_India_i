@@ -2,11 +2,15 @@ import React, { useEffect } from "react";
 
 const Profile = () => {
 
-   const email = localStorage.getItem("email");
+   const email = localStorage.getItem("email") || "test@gmail.com";
   return (
-    <div className="profile bg-[#F9F9F9] flex flex-col p-3 mt-1 h-[100vh] rounded-md w-[75%] m-auto border-gray-200">
+    <>
+                   <h2 className='text-[18px] p-3 px-8 mt-4 font-[400] text-[#111827] '>Account settings</h2>
+
+    <div className="profile bg-[#F9F9F9] flex flex-col mt-1 p-3  h-[100vh] rounded-md w-[86%] m-auto border-gray-200">
+
       <div className="profile_upper flex  gap-3 items-center p-3">
-      <div className="profile_img w-[55px] h-[55px] relative  mb-2">
+      <div className="profile_img w-[75px] h-[75px] relative  mb-2">
         <img
         className="w-full h-full object-cover rounded-full"
           src="https://fastly.picsum.photos/id/408/60/60.jpg?hmac=F3Lm98z9EGMH3qbYWqCG9Bq8lrsuupQo6XdyOyS-sJI"
@@ -24,13 +28,14 @@ const Profile = () => {
         </div>
       </div>
       <div className="profile_txt">
-      <h3 className="block font-bold text-[13px]">John Doe </h3>
+      <h3 className="block font-bold text-[15px]">John Doe </h3>
       <small>{email || ""}</small>
       </div>
       </div>
-      <hr className="border-gray-200 mb-2" />
-      <p className="text-[#757d6f]" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo culpa quisquam vitae ex alias sit!</p>
+      <hr className="border-gray-300 border-dashed  mb-2" />
+      <p className="text-[14px]" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo culpa quisquam vitae ex alias sit!</p>
     </div>
+    </>
   );
 };
 
